@@ -22,6 +22,8 @@
 		<div data-role="header"
 			data-position="fixed">
 			<h1>Home</h1>
+			<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog" class="ui-btn-right">Info</a>
+
 		</div><!-- header -->
 		<div data-role="content">
 			Welcome to the View Source App
@@ -55,6 +57,7 @@
 			data-id="vs_header">
 			<h1>Blog</h1>
 			<a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+			<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog">Info</a>
 		</div><!-- header -->
 		<div data-role="content">
 			<div data-role="collapsible-set">
@@ -124,6 +127,7 @@
 			data-id="vs_header">
 			<h1>Videos</h1>
 			<a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+			<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog">Info</a>
 		</div><!-- header -->
 		<div data-role="content">
 
@@ -197,6 +201,7 @@
 			data-id="vs_header">
 			<h1>Photos</h1>
 			<a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+			<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog">Info</a>
 		</div><!-- header -->
 		<p>Photos from Flickr</p>
 		<div data-role="footer"
@@ -238,6 +243,8 @@
 			data-id="vs_header">
 			<h1>Tweets</h1>
 			<a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+			<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog">Info</a>
+			
 		</div><!-- header -->
 		<p>Tweets page.</p>
 		<div data-role="footer"
@@ -269,7 +276,16 @@
 			</div><!-- navbar -->
 		</div><!-- footer -->
 	</div><!-- page -->
-
+	<div data-role="page" id="info">
+		<div data-role="header">
+			<h1>About View Source</h1>
+		</div>
+		<div data-role="content">
+			<p>View Source offers short projects on intermediate to advanced web design topics, covering technologies such as HTML, PHP, jQuery, and CSS, as well as content management solutions like WordPress and integration with Twitter, YouTube, and more.</p>					
+			<a href="#" data-role="button" data-inline="true" data-rel="back">cancel</a>
+			<a href="#home" data-role="button" data-inline="true">home</a>
+		</div>	
+	</div>
 
 </body>
 </html>
