@@ -23,7 +23,9 @@
 			data-position="fixed">
 			<h1>Home</h1>
 		</div><!-- header -->
-		<p>Welcome to the View Source App</p>
+		<div data-role="content">
+			Welcome to the View Source App
+		</div>
 		<div data-role="controlgroup">
 			<a href="#blog" 
 				data-role="button"
@@ -54,7 +56,31 @@
 			<h1>Blog</h1>
 			<a href="#home" data-icon="home" data-iconpos="notext">Home</a>
 		</div><!-- header -->
-		<p>This is our blog.</p>
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible">
+					<h3>A JSON Tutorial. Getting started with JSON</h3>
+					<p>Getting started with JavaScript Object Notation. A JSON tutorial for Absolute Beginners</p>
+				</div><!-- collapsible -->
+				<div data-role="collapsible"
+						 data-collapsed="false">
+					<h3>WordPress Newbie Tip…control length of posts on homepage</h3>
+					<p>If your WordPress site is set up to show the full length articles</p>				
+				</div><!-- collapsible -->
+				<div data-role="collapsible">
+					<h3>Tips for finding a great domain name</h3>
+					<p>Workflow tips and tricks for Adobe In-Design</p>				
+				</div><!-- collapsible -->
+				<div data-role="collapsible">
+					<h3>Advantages of Creating Subdomain Shortcuts</h3>
+					<p>Creating sub-domains gives you the ability to create shortcuts</p>				
+				</div><!-- collapsible -->
+				<div data-role="collapsible">
+					<h3>Creating a Photo Rotator with JQuery Cycle</h3>
+					<p>I love the JQuery tagline…write less, do more. </p>								
+				</div><!-- collapsible -->				
+			</div><!-- accordion -->
+		</div><!-- content -->
 		<div data-role="footer"
 			data-position="fixed"
 			data-id="vs_footer">
