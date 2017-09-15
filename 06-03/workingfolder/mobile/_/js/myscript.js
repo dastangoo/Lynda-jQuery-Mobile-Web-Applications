@@ -41,18 +41,26 @@ function listVideos(data) {
 
 		var title = data.feed.entry[i].title.$t;
 		var thumbnail = data.feed.entry[i].media$group.media$thumbnail[0].url;
+		var description = data.feed.entry[0].media$group.media$description.$t;
+		var id = data.feed.entry[0].id.$t.substring(38);
 		
 		var blocktype = ((i % 2)===1) ? 'b': 'a';
 		
 		output += '<div class="ui-block-' + blocktype + '">';
+		output += '<a href="#videoplayer" data-transition="fade" onclick="palyVideo(\'' + id +'\', \'' + title + '\', \'' + escape(description) + '\')">';
 		output += '<h3 class="movietitle">' + title + '</h3>';
 		output += '<img src="' + thumbnail + '" alt="' + title + '" />';
-		output +="</div>";
+		output += "</a>";
+		output += "</div>";
 	}
 	
 	$('#videolist').html(output);
+}
 
-
-	//var description = data.feed.entry[0].media$group.media$description.$t;
-	//var id = data.feed.entry[0].id.$t.substring(38);
+function playVideo(id, title, description) {
+	var output = '<iframe src="http://youtube.com/embed/' + id + '?wmode=transparent&amp;HD=0&amp;rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>';
+	output += '<h3>' + title + '</h3>';
+	output += '<p>' + unescape(description) + '</p>';
+	$('#myplayer').html(output);
+	
 }

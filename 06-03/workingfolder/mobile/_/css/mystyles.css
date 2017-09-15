@@ -25,6 +25,24 @@ body {
 	width: 90%;
 }
 
+#videolist a {
+	text-decoration: none;
+	color: #777;
+}
+
+#videoplayer .ui-content {
+	margin: 0;
+	padding: 0;
+}
+
+#videoplayer iframe {
+	width: 100%;
+	min-height: 50%;
+}
+
+#videoplayer h3, #myplayer p {
+	padding: 0 5%;
+}
 
 .ui-icon-vs_video {
 	background-image: url("../../images/icon_video.png");
