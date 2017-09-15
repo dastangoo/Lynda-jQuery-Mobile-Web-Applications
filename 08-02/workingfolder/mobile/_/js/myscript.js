@@ -100,7 +100,21 @@ function listTweets(data) {
 		var text = data[key].text;
 		var thumbnail = data[key].user.profile_image_url;
 		var name = data[key].user.name;
-		
+
+		text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(i) {
+			var url = i.link(i);
+			return url;
+		});
+		text.replace(/[@]+[A-Za-z0-9-_]+/g, function(i) {
+			var item = i.replace("@", '');
+			var url = i.link("http://twitter.com/" + item);
+			return url;
+		});
+		text.replace(/[#]+[A-Za-z0-9-_]+/g, function(i) {
+			var item = i.replace("#", '%23');
+			var url = i.link("http://search.twitter.com/search?q=" + item);
+			return url;
+		});
 		output += '<li>';
 		output += '<img src="' + thumbnail +'" alt="Photo of ' + name + '">';
 		output += '<div>' + text + '</div>';

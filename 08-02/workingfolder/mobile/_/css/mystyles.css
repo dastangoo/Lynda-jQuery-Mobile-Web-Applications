@@ -111,6 +111,25 @@ body {
 	padding: 0;
 }
 
+
+#tweets .ui-listitem li {
+	background: #EEE;
+	color: #666;
+	font-weight: normal;
+	border-top: 1px solid #888;
+}
+
+#tweets .ui-listview a {
+	color: #555;
+}
+
+#tweets img {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin: 10px 0 0 25px;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio:2) {
 
 	.ui-icon-vs_video {
