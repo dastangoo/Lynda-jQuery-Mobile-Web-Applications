@@ -8,7 +8,7 @@ function listPosts(data) {
 		var excerpt = tempDiv.innerHTML;	
 	
 		output += '<li>';
-		output += '<a href="' +val.url + '">';
+		output += '<a href="#blogpost" onclick="showPost(' + val.id + ')">';
 		output += '<h3>' + val.title + '</h3>';
 		
 		output += (val.thumbnail) ?
@@ -21,3 +21,13 @@ function listPosts(data) {
 	output+='</ul>';
 	$('#postlist').html(output);
 } // lists all the posts
+
+function showPosts(id) {
+	$.getJSON('http://iveiwsource.com/?json=get_post&post_id=' + id + '&callback=?', 
+		function(data) {
+			var output = '';
+			output += '<h3>' + data.title + '</h3>';
+			output += data.post.content;
+			$('#mypost').html(output);
+	}); // Get JSON Data for Stories
+}// ShowPost
