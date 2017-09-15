@@ -64,7 +64,7 @@ function playVideo(id, title, description) {
 }
 
 function jsonFlickrFeed(data) {
-	console.log(data);
+//	console.log(data);
 	var output='';
 	
 	for (var i = 0; i < data.items.length; i++) {
@@ -88,21 +88,26 @@ function showPhoto(link, title) {
 	output += '<img src="' + link + '_b.jpg" alt="' + title +'" />';
 	output += '</a>';
 	$('#myphoto').html(output);
-}
+}// showPhoto
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function listTweets(data) {
+	console.log(data);
+	
+	var output = '<ul data-role="listview" data-theme="a">';
+	
+	$.each(data, function(key, val) {
+		var text = data[key].text;
+		var thumbnail = data[key].user.profile_image_url;
+		var name = data[key].user.name;
+		
+		output += '<li>';
+		output += '<img src="' + thumbnail + '" alt="Photo of ' + name + '">';
+		output += '<div>' + text + '</div>';
+		output += '</li>';
+	});// go through each tweet
+	
+	output + '</ul>';
+	$('#tweetlist').html(output);
+}// listTweets
 
