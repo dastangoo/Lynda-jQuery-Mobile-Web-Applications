@@ -35,15 +35,19 @@ function showPost(id) {
 
 function listVideos(data) {
 	console.log(data);
-	//Title
-	console.log(data.feed.entry[0].title.$t);
+
+	var output = '';
+	for	(var i = 0; i < data.feed.entry.length; i++) {
+		
+		var title = data.feed.entry[i].title.$t;
+		var thumbnail = data.feed.entry[i].media$group.media$thumbnail[0].url;
+		
+		var blocktype = ((i % 2) === 1) ? 'b' : 'a';
+		output += '<div class="ui-block-' + blocktype + '">'
+		output += '<h3 class="movietitle">' + title + '</h3>';
+		output += '<img src="' + thumbnail + '" alt="' + title + '" />';
+		output += '</div>';
+	}
 	
-	//Description
-	console.log(data.feed.entry[0].media$group.media$description.$t);
-	
-	//Thumbnail
-	console.log(data.feed.entry[0].media$group.media$thumbnail[0].url);
-	
-	//ID
-	console.log(data.feed.entry[0].id.$t.substring(38));
+	$('#videolist').html(output);	
 }
