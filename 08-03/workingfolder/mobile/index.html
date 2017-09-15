@@ -340,14 +340,24 @@
 		</div>
 	</div>
 	
-<script src="http://iviewsource.com/?json=recentstories&callback=listPosts" type="text/javascript"></script>
+	<script src="http://iviewsource.com/?json=recentstories&callback=listPosts" type="text/javascript"></script>
 
-<script src="http://gdata.youtube.com/feeds/users/lynda/uploads?alt=json-in-script&max-results=30&category=Villalobos&callback=listVideos" type="text/javascript"></script>
+	<script src="http://gdata.youtube.com/feeds/users/lynda/uploads?alt=json-in-script&max-results=30&category=Villalobos&callback=listVideos" type="text/javascript"></script>
 
-<script src="http://api.flickr.com/services/feeds/photos_public.gne?id=73845487@N00&format=json&tags=viewsource" type="text/javascript"></script>
+	<script src="http://api.flickr.com/services/feeds/photos_public.gne?id=73845487@N00&format=json&tags=viewsource" type="text/javascript"></script>
 
-<script src="http://twitter.com/status/user_timeline/planetoftheweb.json?count=30&callback=listTweets" type="text/javascript"></script>
-
+	<script src="http://twitter.com/status/user_timeline/planetoftheweb.json?count=30&callback=listTweets" type="text/javascript"></script>
+	
+	<script>
+		$(document).ready(function() {
+			var refereshID = setInterval(function() {
+				$.getJSON('http://twitter.com/status/user_timeline/planetoftheweb.json?count=30&callback=?', function(data) {
+					listTweets(data);
+					$('#tweetlist').trigger('create');
+				});
+			}, 5000);
+		});
+	</script>
 
 </body>
 </html>
