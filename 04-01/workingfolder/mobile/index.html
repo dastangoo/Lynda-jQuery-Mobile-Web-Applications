@@ -17,7 +17,8 @@
 	<!-- Page: home -->
 	<div id="home"
 		data-role="page"
-		data-title="View Source: Home">
+	  data-theme="e"
+		data-title="View Source: Home"> 
 
 		<div data-role="header"
 			data-position="fixed">
@@ -55,8 +56,10 @@
 	<!-- Page: blog -->
 	<div id="blog"
 		data-role="page"
+		data-theme="e"
 		data-title="View Source: Blog">
 		<div data-role="header"
+			data-theme="e"
 			data-position="fixed"
 			data-id="vs_header">
 			<h1>Blog</h1>
@@ -70,7 +73,8 @@
 				data-rel="dialog"
 				>Info</a>
 		</div><!-- header -->
-		<div data-role="content">
+		<div data-role="content"
+				data-theme="d">
 			<div data-role="collapsible-set">
 				<div data-role="collapsible">
 					<h3>A JSON Tutorial. Getting started with JSON</h3>
@@ -100,6 +104,7 @@
 			</div><!-- accordion -->
 		</div><!-- content -->
 		<div data-role="footer"
+			data-theme="e"
 			data-position="fixed"
 			data-id="vs_footer">
 			<div data-role="navbar">
@@ -308,8 +313,11 @@
 		</div><!-- footer -->
 	</div><!-- page -->
 	
-	<div data-role="page" id="info">
-		<div data-role="header">
+	<div data-role="page" 
+		id="info"
+		data-theme="e">
+		<div data-role="header"
+			data-theme="e">
 			<h1>About View Source</h1>
 		</div>
 		<div data-role="content">
@@ -318,9 +326,11 @@
 				data-role="button"
 				data-inline="true"
 				data-rel="back"
+				data-theme="c"
 			>cancel</a>
 			<a href="#home"
 				data-role="button"
+				data-theme="b"
 				data-inline="true"
 			>home</a>
 		</div>
