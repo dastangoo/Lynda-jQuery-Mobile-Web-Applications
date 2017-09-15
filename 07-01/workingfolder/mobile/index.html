@@ -211,7 +211,12 @@
 				data-rel="dialog"
 				>Info</a>
 		</div><!-- header -->
-		<p>Photos from Flickr</p>
+		<div data-role="content" 
+			data-theme="a">
+			<div class="ui-grid-c" id="photolist">
+				
+			</div><!-- grid -->
+		</div><!-- content -->
 		<div data-role="footer"
 			data-position="fixed"
 			data-id="vs_footer">
@@ -240,6 +245,20 @@
 				</ul>
 			</div><!-- navbar -->
 		</div><!-- footer -->
+	</div><!-- page -->
+	
+	<div id="showphoto" 
+		data-role="page">
+		<div data-role="header"
+			 data-position="fixed"
+			 data-theme="a">
+			 	<a href="#photo"
+			 	 data-transition="fade"
+			 	 data-icon="back"
+			 	 data-iconpos="notext"
+			 	 >Photos</a>
+			 	<h1>Photos</h1>
+	  </div><!-- header -->
 	</div><!-- page -->
 	
 	<!-- Page: Tweets -->
@@ -314,9 +333,10 @@
 		</div>
 	</div>
 	
-<script src="http://iviewsource.com/?json=recentstories&callback=listPosts" type="text/javascript"></script>
+	<script src="http://iviewsource.com/?json=recentstories&callback=listPosts" type="text/javascript"></script>
 
-<script src="http://gdata.youtube.com/feeds/users/lynda/uploads?alt=json-in-script&max-results=30&category=Villalobos&callback=listVideos" type="text/javascript"></script>
+	<script src="http://gdata.youtube.com/feeds/users/lynda/uploads?alt=json-in-script&max-results=30&category=Villalobos&callback=listVideos" type="text/javascript"></script>
+	<script src="http://api.flicker.com/services/feeds/photos_public.gne?id73845487@N00&format=json&tags=viewsource"></script>
 
 </body>
 </html>
