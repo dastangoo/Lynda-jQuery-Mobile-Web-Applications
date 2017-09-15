@@ -10,6 +10,9 @@ function listPosts(data) {
 		output += '<li>';
 		output += '<a href="' +val.url + '">';
 		output += '<h3>' + val.title + '</h3>';
+		output += (val.thumbnail) ? 
+			'<img src="' + val.thumbnail + '" alt="' + val.title + '" />' :
+		  '<img src="images/viewsourcelogo.png" alt="View Source Logo" />';
 		output += '<p>' + excerpt + '</p>';
 		output += '</a>';
 		output += '</li>';
