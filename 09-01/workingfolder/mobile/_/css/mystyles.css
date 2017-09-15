@@ -45,7 +45,7 @@ body {
 
 #videolist h3 {
 	margin: 15px 0 5px 0;
-	height: 35px;
+	height: 40px;
 	overflow: hidden;
 	font-size: 1em;
 }
@@ -78,7 +78,7 @@ body {
 	width: 100px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
-	-border-radius: 10px;
+	border-radius: 10px;
 }
 
 #photolist .ui-block-a,
@@ -86,11 +86,11 @@ body {
 #photolist .ui-block-c {
 	width: 100px;
 	height: 100px;
-	padding: 5px;
+	padding: 2px;
 }
 
 #photolist.ui-grid-c {
-	width: 330px;
+	width: 312px;
 	padding: 0;
 	margin: 0 auto;
 }
