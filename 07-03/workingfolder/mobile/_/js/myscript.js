@@ -75,13 +75,22 @@ function jsonFlickrFeed(data) {
 			((i%3)===1) ? 'b':
 			'a';
 		output += '<div class="ui-block-' + blocktype + '">';
+		output += '<a href="#showphoto" data-transition="fade" onclick="showPhoto(\''+ link + '\', \'' + title + '\')">';
 		output += '<img src="' + link + '_q.jpg" alt="' + title + '" />';
+		output + '</a>';
 		output += '</div>';
 	} // go through each photo
 	$('#photolist').html(output);
 } //jsonFlickrFeed
 
-
+function showPhoto(link, title) {
+	var output = '< a href="#photos" data-transition="fade">';
+	output += '<img src="' + link + '_b.jpg" alt="' + title + '" />';
+	output += '</a>';
+	
+	$('#myphoto').html(output);
+	
+}
 
 
 
